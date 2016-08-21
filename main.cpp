@@ -12,6 +12,7 @@ using namespace std;
 
 int main() {
     baidu mybaidu;
+    leetcode myleetcode;
     std::cout << std::endl;
     return 0;
 }
