@@ -1,3 +1,9 @@
+# ideal files
+.idea
+
+# CMake file
+CMakeLists.txt
+
 # Compiled Object files
 *.slo
 *.lo
