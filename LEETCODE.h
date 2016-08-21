@@ -1,7 +1,7 @@
 //
 // Created by yanjun on 16-8-21.
 //
-
+#include "My_Class.h"
 #ifndef INTERVIEW_LEETCODE_H
 #define INTERVIEW_LEETCODE_H
 class leetcode {
