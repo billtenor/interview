@@ -31,6 +31,27 @@ public:
 };
 class sort{
 private:
+    void swap(int* a,int* b){
+        int buff=*a;
+        *a=*b;
+        *b=buff;
+    }
+    void quick_helper(int A[],int start,int end){
+        if(start>=end)return;
+        int sep=start;
+        for(int i=start;i<end;i++){
+            if(A[i]<A[end]){
+                if(i==sep)sep++;
+                else{
+                    swap(A+i,A+sep);
+                    sep++;
+                }
+            }
+        }
+        swap(A+sep,A+end);
+        quick_helper(A,start,sep-1);
+        quick_helper(A,sep+1,end);
+    }
     void merge_helper(int A[],int buff[],int start,int end){
         if(start>=end){
             return;
@@ -82,6 +103,9 @@ public:
         int* buff=new int[n];
         merge_helper(A,buff,0,n-1);
         delete [] buff;
+    }
+    void quick(int A[],int n){
+        quick_helper(A,0,n-1);
     }
 };
 

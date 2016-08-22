@@ -29,7 +29,7 @@ int main() {
         for(int i=0;i<n;i++){
             cin>>A[i];
         }
-        my_max_heap.heap_sort(A,n);
+        mysort.quick(A,n);
         for(int i=0;i<n;i++){
             cout<<A[i]<<" ";
         }
@@ -37,9 +37,8 @@ int main() {
         delete[] A;
     }
 
-    while(1){
-        cout<<"input heap size:";
-        cin>>n;
+    cout<<"input heap size:";
+    while(cin>>n){
         data=new int[n];
         state=-1;
         while(!(state==1||state==2)) {
@@ -74,9 +73,8 @@ int main() {
             }
         }
         delete[] data;
+        cout<<"input heap size:";
     }
-
-
 
     while(cin>>n){
         int* A=new int[n];
