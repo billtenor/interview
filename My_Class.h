@@ -11,6 +11,17 @@ struct Interval {
     Interval() : start(0), end(0) {}
     Interval(int s, int e) : start(s), end(e) {}
 };
+class heep{
+private:
+    int* data;
+    int n;
+public:
+    heep():data(NULL),n(0){};
+    heep(int* data,int n){
+
+    }
+
+};
 
 struct binary_tree{
     int val;
